@@ -12,5 +12,6 @@ def reverseString(s):
     return reverse
 
 print("What's the string you want to flip over?")
-inputString = input('>')
-print(reverseString(inputString))
+#
+print("mississippi")
+print(reverseString("mississippi"))
