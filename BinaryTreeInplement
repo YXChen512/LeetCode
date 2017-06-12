@@ -1,0 +1,24 @@
+# Binary Search Tree
+# dealing with integers as node values
+
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+class binaryTree(object):
+
+
+    def maxDep(self):
+        if (self.left == None) & (self.right == None):
+            return 1
+        else:
+            return max(maxDep(self.left),maxDep(self.right)) + 1
+
+    def addNote(self, newNode):
+        if newNode.val <= self.val:
+            if self.left == None:
+                self.left = newNode
+            else:
+                self.left.addNote(newNode)
